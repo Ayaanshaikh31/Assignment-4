@@ -1,0 +1,81 @@
+/* Background and general body styling */
+body {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+    background-size: cover;
+    -webkit-animation: slidein 100s infinite alternate;
+    animation: slidein 100s infinite alternate;
+}
+
+@-webkit-keyframes slidein {
+    from { background-position: top; background-size: 3000px; }
+    to { background-position: -100px 0px; background-size: 2750px; }
+}
+
+@keyframes slidein {
+    from { background-position: top; background-size: 3000px; }
+    to { background-position: -100px 0px; background-size: 2750px; }
+}
+/* Form container styling */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.rizz-form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(101, 61, 61, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Form input fields */
+.rizz-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(246, 234, 234, 0.8);
+    color: #333;
+    font-size: 16px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.rizz-form input:focus {
+    border-color: #333;
+    background-color: white;
+    outline: none;
+}
+.rizz-form input:hover {
+    background-color: rgba(188, 144, 144, 0.9);
+}
+/* Submit button styling */
+.submit-btn {
+    padding: 12px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+.submit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #2980b9;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+    background-color: #1e6f98;
+}
+@media (max-width: 600px) {
+    .rizz-form {
+        width: 80%;
+    }
+}
